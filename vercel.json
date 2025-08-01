@@ -1,6 +1,5 @@
 {
   "version": 2,
-  "name": "fmaa-dashboard-complete",
   "builds": [
     {
       "src": "package.json",
@@ -17,30 +16,16 @@
       }
     }
   ],
-  "routes": [
+  "rewrites": [
     {
-      "src": "/api/(.*)",
-      "dest": "/api/$1",
-      "headers": {
-        "Access-Control-Allow-Origin": "*",
-        "Access-Control-Allow-Methods": "GET, POST, PUT, DELETE, OPTIONS, PATCH",
-        "Access-Control-Allow-Headers": "X-Requested-With, Content-Type, Accept, Authorization, X-API-Key",
-        "Access-Control-Allow-Credentials": "true",
-        "Cache-Control": "no-cache"
-      }
+      "source": "/api/(.*)",
+      "destination": "/api/$1"
     },
     {
-      "src": "/(.*)",
-      "dest": "/$1"
+      "source": "/(.*)",
+      "destination": "/index.html"
     }
   ],
-  "functions": {
-    "api/*.js": {
-      "maxDuration": 30,
-      "memory": 1024,
-      "runtime": "nodejs18.x"
-    }
-  },
   "headers": [
     {
       "source": "/api/(.*)",
@@ -79,7 +64,6 @@
   ],
   "env": {
     "NODE_ENV": "production"
-  },
-  "regions": ["sin1", "hnd1", "iad1"]
+  }
 }
-
+📁 File 3: .env (copy dari env.example.cac)

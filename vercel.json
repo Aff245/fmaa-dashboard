@@ -8,8 +8,8 @@
         "distDir": "dist"
       }
     },
-    { 
-      "src": "api/*.js", 
+    {
+      "src": "api/*.js",
       "use": "@vercel/node",
       "config": {
         "maxDuration": 30
@@ -66,4 +66,3 @@
     "NODE_ENV": "production"
   }
 }
-📁 File 3: .env (copy dari env.example.cac)

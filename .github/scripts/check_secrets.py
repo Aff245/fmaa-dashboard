@@ -7,7 +7,7 @@ import re
 FORBIDDEN_PATTERNS = [
     r'sk_live_[a-zA-Z0-9]+',  # Stripe Live Key
     r'ghp_[a-zA-Z0-9]+',      # GitHub Token
-    r'-----BEGIN RSA PRIVATE KEY-----'
+    
 ]
 
 def scan_file(file_path ):

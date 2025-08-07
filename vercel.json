@@ -1,5 +1,6 @@
 {
   "version": 2,
+  "cleanUrls": true,
   "builds": [
     {
       "src": "api/**/*.js",
@@ -8,7 +9,9 @@
     {
       "src": "package.json",
       "use": "@vercel/static-build",
-      "config": { "outputDirectory": "dist" }
+      "config": {
+        "outputDirectory": "dist"
+      }
     }
   ],
   "routes": [
